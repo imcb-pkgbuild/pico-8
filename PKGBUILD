@@ -4,7 +4,7 @@ pkgname='pico-8-gpio'
 pkgver='0.2.5c'
 pkgrel=1
 pkgdesc="PICO-8 with support for Raspberry Pi GPIO pins"
-arch=('armv7h')
+arch=('armv6h' 'armv7h')
 url="http://www.lexaloffle.com/pico-8.php"
 license=('custom:commercial')
 depends=('glibc' 'sdl2' 'wiringpi')
@@ -41,7 +41,7 @@ package () {
   # License
   install -Dm644 "LICENSE" "${_share}/licenses/${pkgname}/LICENSE"
   # Data and readmes
-  install -Dm644 -t "${_opt}" "${_name}.dat" "${pkgname}_manual.txt" readme_*.txt
+  install -Dm644 -t "${_opt}" "${_name}.dat" "${pkgname}_manual.txt" "readme_raspi.txt"
 
   # Binary
   local _target = "${_name}_gpio"
