@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
   <mime-type type="application/pico-8">
+    <sub-class-of type="image/png"/>
     <comment>PICO-8 cartridge</comment>
     <comment xml:lang="en">PICO-8 cartridge</comment>
     <comment xml:lang="fr">Cartouche PICO-8</comment>

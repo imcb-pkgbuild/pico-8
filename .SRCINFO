@@ -1,7 +1,7 @@
 pkgbase = pico-8
 	pkgdesc = A fantasy console for making, sharing and playing tiny games and other computer programs.
 	pkgver = 0.2.6b
-	pkgrel = 1
+	pkgrel = 2
 	url = http://www.lexaloffle.com/pico-8.php
 	arch = x86_64
 	arch = i686
@@ -15,7 +15,7 @@ pkgbase = pico-8
 	source = pico-8.desktop
 	source = pico-8.xml
 	sha256sums = 272f33c38a74456a4d2597a6b1d0c6ee9695d0e47f31ce08018c24a78e62759e
-	sha256sums = 2776340602e7ad29898500c4b2162bb5dd7746b933fb443b551e25a751e375e7
+	sha256sums = a7cb3f7f991c0ce5fdadf0a5e5f7f0430ad96ea69f3da26357a0c75e2b54217c
 	source_x86_64 = file://pico-8_0.2.6b_amd64.zip
 	sha256sums_x86_64 = 7ca8e9019f73771064859f71302bbc65c6e4042030605f4ee2f2c8c4e29b15d5
 	source_i686 = file://pico-8_0.2.6b_i386.zip

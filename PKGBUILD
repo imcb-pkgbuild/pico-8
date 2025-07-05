@@ -3,7 +3,7 @@
 
 pkgname='pico-8'
 pkgver='0.2.6b'
-pkgrel=1
+pkgrel=2
 pkgdesc="A fantasy console for making, sharing and playing tiny games and other computer programs."
 arch=('x86_64' 'i686' 'armv7h' 'aarch64')
 url="http://www.lexaloffle.com/pico-8.php"
@@ -20,7 +20,7 @@ source_armv7h=("file://${pkgname}_${pkgver}_raspi.zip")
 source_aarch64=("file://${pkgname}_${pkgver}_raspi.zip")
 
 sha256sums=('272f33c38a74456a4d2597a6b1d0c6ee9695d0e47f31ce08018c24a78e62759e'
-            '2776340602e7ad29898500c4b2162bb5dd7746b933fb443b551e25a751e375e7')
+            'a7cb3f7f991c0ce5fdadf0a5e5f7f0430ad96ea69f3da26357a0c75e2b54217c')
 sha256sums_x86_64=('7ca8e9019f73771064859f71302bbc65c6e4042030605f4ee2f2c8c4e29b15d5')
 sha256sums_i686=('91942a7226313378f7adde0eccbf0719d28f358db6bdcbdf572d9867f5d68f2e')
 sha256sums_armv7h=('54a3c502215ce0f2a07ae35624fed38fbd977a613f0d1366247d045429b77d21')
