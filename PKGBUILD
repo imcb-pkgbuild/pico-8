@@ -1,4 +1,4 @@
-# Maintainer: (jmcb) <joelsgp@protonmail.com>
+# Maintainer: (imcb) <irismessage@protonmail.com>
 # Contributor: (Joe084) <develon69 at gmail dot com>
 
 pkgname='pico-8'
