@@ -24,36 +24,27 @@ source_x86_64=("file://${pkgname}_${pkgver}_amd64.zip")
 source_armv7h=("file://${pkgname}_${pkgver}_raspi.zip")
 source_aarch64=("file://${pkgname}_${pkgver}_raspi.zip")
 
-sha256sums=(
-  '272f33c38a74456a4d2597a6b1d0c6ee9695d0e47f31ce08018c24a78e62759e'
-  'a7cb3f7f991c0ce5fdadf0a5e5f7f0430ad96ea69f3da26357a0c75e2b54217c'
-)
+sha256sums=('272f33c38a74456a4d2597a6b1d0c6ee9695d0e47f31ce08018c24a78e62759e'
+            'a7cb3f7f991c0ce5fdadf0a5e5f7f0430ad96ea69f3da26357a0c75e2b54217c')
 sha256sums_x86_64=('edf2ce854740585b0f98884ee09d63f9ab8e6c8772e0148a902927b6408c9eaa')
 sha256sums_i686=('e220307adf0d01082cbaf6d7bdfce7201c0b7244c962d883d2fea31ca20741ee')
 sha256sums_armv7h=('5e64187b50c470b2e345ea0ccccb04a9c098660cc8b9974672f6587741893295')
 sha256sums_aarch64=('5e64187b50c470b2e345ea0ccccb04a9c098660cc8b9974672f6587741893295')
 
 
-prepare () {
-  # Moves content of the subfolder named pico-8 to src root
-  mv pico-8/* .
-  # Changes license and icon filenames to comply with naming conventions
-  mv "license.txt" "LICENSE"
-  mv "lexaloffle-pico8.png" "${pkgname}.png"
-}
-
-
 package () {
+  cd "${pkgname}"
+
   local _name=pico8
   local _opt="${pkgdir}/opt/${pkgname}"
   local _share="${pkgdir}/usr/share"
 
   # Desktop entry
-  install -Dm644 "${pkgname}.desktop" "${_share}/applications/${pkgname}.desktop"
-  install -Dm644 "${pkgname}.png" "${_share}/pixmaps/${pkgname}.png"
-  install -Dm644 "${pkgname}.xml" "${_share}/mime/packages/${pkgname}.xml"
+  install -Dm644 "${srcdir}/${pkgname}.desktop" "${_share}/applications/${pkgname}.desktop"
+  install -Dm644 "${srcdir}/${pkgname}.xml" "${_share}/mime/packages/${pkgname}.xml"
+  install -Dm644 "lexaloffle-pico8.png" "${_share}/pixmaps/${pkgname}.png"
   # License
-  install -Dm644 "LICENSE" "${_share}/licenses/${pkgname}/LICENSE"
+  install -Dm644 "license.txt" "${_share}/licenses/${pkgname}/license.txt"
   # Data and readmes
   install -Dm644 -t "${_opt}" "${_name}.dat" "${pkgname}_manual.txt" readme_*.txt
 
