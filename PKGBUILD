@@ -2,25 +2,32 @@
 # Contributor: (Joe084) <develon69 at gmail dot com>
 
 pkgname='pico-8'
-pkgver='0.2.7'
+pkgver=0.2.7
 pkgrel=2
 pkgdesc="A fantasy console for making, sharing and playing tiny games and other computer programs."
 arch=('x86_64' 'i686' 'armv7h' 'aarch64')
 url="http://www.lexaloffle.com/pico-8.php"
-license=('custom:commercial')
-depends=('glibc' 'sdl2' 'curl')
+license=('LicenseRef-pico-8')
+depends=(
+  'glibc'
+  'sdl2'
+  'curl'
+)
 optdepends=()
 provides=('pico8')
-
-source=("${pkgname}.desktop"
-        "${pkgname}.xml")
+source=(
+  "${pkgname}.desktop"
+  "${pkgname}.xml"
+)
 source_i686=("file://${pkgname}_${pkgver}_i386.zip")
 source_x86_64=("file://${pkgname}_${pkgver}_amd64.zip")
 source_armv7h=("file://${pkgname}_${pkgver}_raspi.zip")
 source_aarch64=("file://${pkgname}_${pkgver}_raspi.zip")
 
-sha256sums=('272f33c38a74456a4d2597a6b1d0c6ee9695d0e47f31ce08018c24a78e62759e'
-            'a7cb3f7f991c0ce5fdadf0a5e5f7f0430ad96ea69f3da26357a0c75e2b54217c')
+sha256sums=(
+  '272f33c38a74456a4d2597a6b1d0c6ee9695d0e47f31ce08018c24a78e62759e'
+  'a7cb3f7f991c0ce5fdadf0a5e5f7f0430ad96ea69f3da26357a0c75e2b54217c'
+)
 sha256sums_x86_64=('edf2ce854740585b0f98884ee09d63f9ab8e6c8772e0148a902927b6408c9eaa')
 sha256sums_i686=('e220307adf0d01082cbaf6d7bdfce7201c0b7244c962d883d2fea31ca20741ee')
 sha256sums_armv7h=('5e64187b50c470b2e345ea0ccccb04a9c098660cc8b9974672f6587741893295')

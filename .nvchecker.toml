@@ -1,0 +1,7 @@
+[pico-8]
+source = "htmlparser"
+url = "https://www.lexaloffle.com/pico-8.php"
+# tbody is in browser but not in html file for some reason
+xpath = '/html/body/div[1]/div[2]/div[1]/table/tr/td[3]/div/a[@href="/games.php?page=updates"]/div/table/tr/td[2][contains(text(),"Download v")]'
+from_pattern = '^\s*Download v(\d+\.\d+\.\d+)\s*$'
+to_pattern = '\1'
