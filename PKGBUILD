@@ -67,6 +67,6 @@ package () {
 
     # Links the installed binary to /usr/bin
     local _bin="${pkgdir}/usr/bin"
-    mkdir -p "${_bin}"
+    install -d "${_bin}"
     ln -s "/opt/${pkgname}/${_name}" "${_bin}/${_name}"
 }
